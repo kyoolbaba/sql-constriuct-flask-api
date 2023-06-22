@@ -1,0 +1,59 @@
+# Params
+params = [
+    {
+        "default": {
+            "option_order": 1,
+            "name": "dataObjectPath",
+            "label": "Model Name",
+            "required": True,
+        },
+
+        "parameter_type": {
+
+            "type": "SINGLE_SELECT",
+            "description": "",
+            "note": "Select Model Object",
+            "header": 9999,
+            "value": "NULL"
+        },
+        "parameter_header": {
+            "description": "",
+            "type": "STATIC",
+        },
+        "parameter_value": {
+            "description": '',
+            "type": "DATAFILE",
+        }
+    },
+]
+
+# Final
+insert_data = {
+    "default": {
+
+        "function_id": "FUNC_001",
+        "r_function_name": "predict_using_python",
+        "r_is_chain_function": False,
+        "function_name": "Apply ML Algorithm (Py)",
+        "function_language": "PYTHON",
+        "function_label": "Function - Apply ML Algorithm (Py)",
+    },
+    "function_meta_data": {
+        "is_active": True,
+        "is_executable": True,
+        "input_multitable_indicator": False,
+        "all_data_identifier": False,
+        "data_modify_indicator": False,
+        "new_column_indicator": False,
+        "new_datatable_indicator": True,
+        "output_type": "MIXED_TYPE",
+        "create_data_object": False,
+        "use_data_object": True,
+        "function_desc": "",
+        "function_popup_title": "",
+        "function_popup_description": "",
+        "function_search_tags": 4501,
+    },
+    "category_id": 513,
+    "params": params
+}
