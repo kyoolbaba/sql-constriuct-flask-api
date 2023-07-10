@@ -1,5 +1,6 @@
 from flask_restful import Api, Resource;
 from flask import Flask, request, jsonify, Response
+from flask_cors import CORS
 
 from end_part import add_end_part
 from first_part import delete_existing_record
@@ -8,6 +9,8 @@ from parameter import add_params_data
 
 app = Flask(__name__)
 api = Api(app)
+CORS(app)
+
 
 
 @app.route("/", )
@@ -30,7 +33,7 @@ def input_json():
     except Exception as e:
         print(e)
 
-    return sql_construct
+    return {"data":sql_construct}
 
 
 if __name__ == "__main__":
